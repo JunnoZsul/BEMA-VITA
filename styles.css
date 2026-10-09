@@ -282,3 +282,49 @@ img{height:auto}
   .preview-steps { grid-template-columns:1fr; }
   .moment-card { padding:22px; }
 }
+
+/* Autoconocimiento: líneas abiertas, capas y una oferta fácil de comparar. */
+.home .hero{grid-template-columns:1.13fr .87fr;gap:30px}
+.home .hero h1{font-size:clamp(2.35rem,3.5vw,3.4rem);line-height:1.15}
+.home .hero .lead{max-width:540px}
+.organic-map{position:relative;min-width:0;width:100%;align-self:center}
+.organic-map svg{width:100%;height:auto;display:block}
+.organic-map>p{font-size:.78rem;color:var(--muted);text-align:center;margin:0}
+.map-word{position:absolute;font-size:.72rem;background:var(--paper);padding:5px 10px;border-radius:20px;color:var(--navy)}
+.word-one{left:12%;top:73%}.word-two{left:33%;top:40%}.word-three{right:9%;top:22%}
+.situation-cards{gap:16px}
+.situation-choice{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:25px 28px;background:white;border:1px solid var(--line);border-radius:14px;font-size:1.03rem;transition:border-color .18s,transform .18s}
+.situation-choice:hover{border-color:var(--orange);transform:translateY(-2px)}
+.situation-choice>span:last-child{color:var(--orange);flex-shrink:0}
+.map-preview{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.map-preview>div{max-width:760px}.map-preview .btn{flex-shrink:0}
+.modalities-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.modality-card{display:flex;flex-direction:column;padding:35px;min-width:0}
+.modality-card h2{font-size:1.65rem}.modality-card .purchase-price{margin:15px 0}
+.modality-card .check-list{margin-bottom:20px;padding-left:19px;list-style:disc}
+.modality-card .check-list li{display:list-item;color:var(--muted);padding:5px 0;font-size:.94rem}
+.modality-card .btn{margin-top:auto;text-align:center;justify-content:center;white-space:normal}
+.modality-dialogue{border-top:4px solid var(--orange)}
+.modality-note{margin-top:20px}
+.map-dimensions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:23px}
+.map-dimensions span{padding:10px 17px;border:1px solid #cbbfaf;border-radius:30px;font-size:.87rem;background:#f4ede4}
+.sample-map{margin-top:28px}.sample-map h3{font-size:1.35rem}
+.sample-map .eyebrow{line-height:1.6}.sample-map .panel{border-top:3px solid #cbbfaf}
+.nav-actions{margin-left:0;padding-left:20px}
+.service-hero .organic-map{max-width:500px}
+:focus-visible{outline:3px solid #a54821;outline-offset:5px}
+@media(max-width:1100px){.home .hero h1{font-size:2.75rem}.map-preview{align-items:start;flex-direction:column}}
+@media(max-width:760px){
+ .home .hero h1{font-size:clamp(2rem,7.9vw,3.2rem);line-height:1.18}
+ .home .hero .actions{align-items:start;flex-wrap:wrap;gap:15px}
+ .home .organic-map{max-width:400px;margin:25px auto 0}
+ .map-word{font-size:.66rem}.organic-map>p{font-size:.72rem}
+ .modalities-grid{grid-template-columns:1fr;gap:22px}.modality-card{padding:25px}
+ .modality-card h2{font-size:1.45rem}.modality-card .purchase-price{font-size:2.2rem}
+ .situation-choice{padding:22px;font-size:.96rem}.map-preview{padding:25px 0}
+ .map-preview .btn{width:100%}.map-dimensions{gap:9px}.map-dimensions span{padding:8px 13px;font-size:.8rem}
+ .service-hero .organic-map{max-width:320px;margin:auto}
+ .reading-intro h1,.prose h1,.service-hero h1{font-size:clamp(1.85rem,7.6vw,2.4rem);overflow-wrap:break-word}
+ .nav-actions{padding-left:0}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
