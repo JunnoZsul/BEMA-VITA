@@ -157,6 +157,52 @@ img{height:auto}
   .footer-bottom { font-size:.75rem; }
   .footer-bottom p { max-width:660px; }
 }
+@media screen {
+  .purchase-benefits { display:flex; flex-wrap:wrap; gap:14px 26px; margin:0 0 42px; padding:18px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .purchase-benefits span { display:inline-flex; align-items:center; gap:9px; font-size:.86rem; color:var(--navy); }
+  .purchase-benefits .icon { width:18px; height:18px; color:var(--orange); }
+  .purchase-section-title { font-size:1.5rem; margin-bottom:24px; }
+  .delivery-section { display:grid; grid-template-columns:.8fr 1.2fr; gap:65px; align-items:start; }
+  .delivery-section h2 { font-size:2.25rem; line-height:1.2; }
+  .delivery-section>.muted,.delivery-section>div>.muted { max-width:380px; }
+  .delivery-steps { list-style:none; margin:0; padding:0; }
+  .delivery-steps li { display:grid; grid-template-columns:40px 1fr; gap:20px; padding:22px 0; border-top:1px solid var(--line); }
+  .delivery-steps li:first-child { padding-top:0; border-top:0; }
+  .delivery-number { font-size:.83rem; font-weight:700; color:var(--orange); padding-top:3px; }
+  .delivery-steps h3 { font-size:1.13rem; margin:0 0 9px; }
+  .delivery-steps p { font-size:.92rem; color:var(--muted); margin:0; line-height:1.8; }
+  .purchase-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:38px; align-items:start; }
+  .purchase-includes { padding:36px; }
+  .purchase-includes h2 { font-size:1.7rem; margin-bottom:24px; }
+  .purchase-includes .check-list { margin:0; }
+  .purchase-includes .check-list li { font-size:.96rem; padding:11px 0; }
+  .purchase-includes>.text-link { margin-top:25px; }
+  .follow-up-note { margin-top:28px; padding:22px 24px; border-radius:12px; background:var(--soft); }
+  .follow-up-note h3 { font-size:1.06rem; margin-bottom:10px; }
+  .follow-up-note p { margin:0; font-size:.89rem; color:var(--muted); }
+  .purchase-summary { padding:32px; background:#fffdfb; border-top:4px solid var(--orange); }
+  .purchase-summary h2 { font-size:1.55rem; }
+  .purchase-price { font-size:2.45rem; font-weight:700; margin:25px 0 18px; line-height:1.2; }
+  .purchase-price span { display:block; font-weight:500; font-size:.8rem; color:var(--muted); margin-top:8px; }
+  .purchase-pending { font-size:1.02rem; font-weight:600; margin-top:24px; }
+  .purchase-pay { display:flex; width:100%; justify-content:center; text-align:center; margin:22px 0 14px; white-space:normal; }
+  .purchase-email { margin-top:25px; padding-top:23px; border-top:1px solid var(--line); }
+  .purchase-email h3 { font-size:1rem; }
+  .purchase-summary .small { line-height:1.75; }
+}
+@media screen and (max-width:760px) {
+  .purchase-benefits { display:grid; gap:12px; margin-bottom:32px; }
+  .purchase-detail .reading-intro h1 { font-size:clamp(1.75rem,7.4vw,2.4rem); }
+  .purchase-section-title { font-size:1.3rem; }
+  .delivery-section { grid-template-columns:1fr; gap:25px; }
+  .delivery-section h2 { font-size:1.85rem; }
+  .delivery-steps li { gap:12px; grid-template-columns:30px 1fr; padding:19px 0; }
+  .purchase-grid { grid-template-columns:1fr; gap:24px; }
+  .purchase-summary { order:-1; }
+  .purchase-summary,.purchase-includes { padding:25px; }
+  .purchase-summary h2 { font-size:1.4rem; }
+  .follow-up-note { padding:20px; }
+}
 @media screen and (max-width:1100px) {
   .container { width:calc(100% - 56px); }
   .header-inner { height:76px; }

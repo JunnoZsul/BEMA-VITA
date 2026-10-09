@@ -71,8 +71,27 @@ El sitio no integra analítica, cookies de seguimiento, pagos ni envío de respu
 
 Antes del lanzamiento: completar el perfil real del orientador (nombre, biografía, formación y certificaciones verificadas), el canal de contacto, modalidad y condiciones del servicio.
 
-Edita `settings` al inicio de `content.js`. El contacto solo se activa con una URL HTTPS real; mientras esté vacío, la página explica que está pendiente y dirige a recursos, sin simular reservas ni enviar solicitudes. El perfil tampoco inventa credenciales o un retrato.
+Edita `settings` al inicio de `content.js`. El contacto solo se activa con una URL HTTPS real. El perfil y la contratación permanecen pendientes hasta completar sus datos. El perfil tampoco inventa credenciales o un retrato.
 
 Definir el instrumento formal, condiciones de uso e interpretación; las guías actuales siguen siendo demostrativas. No hay cobros, cuentas, agenda ni envío de solicitudes.
 
 Repositorio de destino: `BEMA-VITA`. El dominio todavía no se ha registrado.
+
+
+## Contratación de evaluación por correo
+
+El botón Empezar conduce a elegir un momento y consultar la evaluación de pago. La oferta incluye envío del examen por correo, devolución de respuestas, revisión profesional y retroalimentación personalizada. Si es necesario, el equipo puede pedir más información o una evaluación adicional; sus condiciones y cualquier costo deben explicarse antes de continuar.
+
+Las guías gratuitas siguen en Recursos. Sus respuestas y resultados locales no se envían al equipo y Mi espacio no funciona como panel de seguimiento de una evaluación contratada.
+
+Para habilitar el enlace externo de pago, completa `settings.evaluation` en `content.js`:
+
+- `price`: importe numérico real (sin símbolos ni separadores), mayor que cero.
+- `currency`: código de moneda, inicialmente MXN.
+- `checkoutUrl`: enlace HTTPS del proveedor de pago, sin credenciales en la URL.
+- `supportEmail`: correo real de atención.
+- `ready`: true solamente cuando estén listos el cobro y el proceso de atención.
+
+La página mantiene deshabilitado el pago si faltan el precio, correo, enlace o confirmación de operación. Antes de habilitarlo, la página del proveedor debe mostrar el importe total, plazos, modalidad, condiciones y aviso de privacidad del servicio, y recopilar el correo necesario para enviar el examen.
+
+Este sitio estático no confirma transacciones, no registra pedidos y no envía correos automáticamente. El equipo debe confirmar el pago con el proveedor, recuperar el correo de la contratación, enviar el examen, recibir las respuestas y preparar la retroalimentación. El acceso al enlace de pago o el retorno a la web nunca se considera confirmación de una transacción. Si se decide automatizar, será necesaria una integración del proveedor con confirmación de pago en servidor y un servicio de correo; ninguna clave privada debe incluirse en los archivos de esta web.
