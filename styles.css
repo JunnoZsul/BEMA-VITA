@@ -298,8 +298,8 @@ img{height:auto}
 .situation-choice>span:last-child{color:var(--orange);flex-shrink:0}
 .map-preview{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .map-preview>div{max-width:760px}.map-preview .btn{flex-shrink:0}
-.modalities-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
-.modality-card{display:flex;flex-direction:column;padding:35px;min-width:0}
+.modalities-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.modality-card{display:flex;flex-direction:column;padding:28px;min-width:0}
 .modality-card h2{font-size:1.65rem}.modality-card .purchase-price{margin:15px 0}
 .modality-card .check-list{margin-bottom:20px;padding-left:19px;list-style:disc}
 .modality-card .check-list li{display:list-item;color:var(--muted);padding:5px 0;font-size:.94rem}
@@ -328,3 +328,12 @@ img{height:auto}
  .nav-actions{padding-left:0}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+/* Tres programas y continuidad para clientes. */
+.followup-band{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr);align-items:center;gap:40px;padding:34px;border:1px solid var(--line);border-radius:18px;background:#f4ede4}
+.followup-band h2{font-size:1.8rem}.followup-band p{margin-bottom:0}
+.followup-action{display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+.followup-action .purchase-price{font-size:2rem}.followup-action .purchase-price span{display:block;margin-top:8px}
+.reflection-list{padding-left:24px;max-width:850px}.reflection-list li{padding:8px 0;line-height:1.65;color:var(--muted)}
+@media(max-width:1050px){.modalities-grid{grid-template-columns:1fr}.modality-card{padding:30px}.modality-card .btn{align-self:flex-start}}
+@media(max-width:760px){.followup-band{grid-template-columns:1fr;padding:25px;gap:24px}.followup-band h2{font-size:1.5rem}.modality-card{padding:25px}.modality-card .btn{width:100%}.followup-action .btn{white-space:normal;text-align:center}}
