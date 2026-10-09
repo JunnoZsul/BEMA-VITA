@@ -2,9 +2,10 @@
   "name": "bema-vita-web",
   "version": "0.2.0",
   "private": true,
-  "description": "Sitio inicial de autoconocimiento y orientación vocacional",
+  "description": "Autoconocimiento aplicado a decisiones con evaluación Benziger e interpretación humana",
   "scripts": {
     "start": "node scripts/serve.cjs",
-    "check": "node --check content.js && node --check app.js && node --check data.js && node --check scripts/serve.cjs"
+    "generate": "node build-pages.cjs",
+    "check": "node --check content.js && node --check routes.js && node --check app.js && node --check data.js && node --check build-pages.cjs"
   }
 }
