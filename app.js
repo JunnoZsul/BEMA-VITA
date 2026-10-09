@@ -32,7 +32,7 @@
     book:'<path d="M12 5v16M12 5C8 2 4 3 2 4v16c4-2 7-1 10 1 3-2 6-3 10-1V4c-4-2-7-1-10 1z"/>'
   };
   const icon = name => `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">${paths[name] || paths.compass}</svg>`;
-  const brand = () => `<a class="brand" href="#inicio" aria-label="${esc(SITE.settings.name)}, inicio"><img src="assets/favicon.svg" alt="" width="37" height="37"><span>${esc(SITE.settings.name)}<small>Conócete. Explora. Prueba. Decide.</small></span></a>`;
+  const brand = () => `<a class="brand" href="#inicio" aria-label="${esc(SITE.settings.name)}, inicio"><img src="assets/favicon.svg" alt="" width="37" height="37"><span>${esc(SITE.settings.name)}<small>Orientación vocacional y profesional</small></span></a>`;
   const date = ms => new Date(ms).toLocaleDateString('es-MX', {day:'numeric',month:'long',year:'numeric'});
 
   function loadStore() {
@@ -65,7 +65,7 @@
   function header(route, quiz=false) {
     const el=document.getElementById('site-header');el.className=quiz?'quiz-top':'';
     el.innerHTML=quiz?`<div class="container header-inner">${brand()}<button class="btn secondary small" data-action="exit-quiz">Salir y guardar</button></div>`:
-      `<div class="container header-inner">${brand()}<button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navigation" data-action="menu">${icon('menu')}</button><nav id="navigation" class="nav" aria-label="Navegación principal">${[['inicio','Inicio'],['acompanamientos','Acompañamientos'],['proceso','El proceso'],['metodologia','Metodología'],['sobre','Sobre el proyecto'],['preguntas-frecuentes','Preguntas frecuentes']].map(([id,label])=>`<a href="#${id}" ${route===id?'class="active" aria-current="page"':''}>${label}</a>`).join('')}<a class="btn secondary small" href="#mi-espacio">Mi espacio</a></nav></div>`;
+      `<div class="container header-inner">${brand()}<button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navigation" data-action="menu">${icon('menu')}</button><nav id="navigation" class="nav" aria-label="Navegación principal">${[['acompanamientos','Acompañamientos'],['proceso','Cómo funciona'],['recursos','Recursos'],['sobre','Sobre Bema Vita']].map(([id,label])=>`<a href="#${id}" ${route===id?'class="active" aria-current="page"':''}>${label}</a>`).join('')}<span class="nav-actions"><a class="space-link" href="#mi-espacio" ${route==='mi-espacio'?'aria-current="page"':''}>Mi espacio</a><a class="btn small" href="#primer-paso" ${route==='primer-paso'?'aria-current="page"':''}>Empezar <span aria-hidden="true">↗</span></a></span></nav></div>`;
     document.getElementById('site-footer').hidden=quiz;
   }
   function footer() {
@@ -127,8 +127,8 @@
   function methodology() { return SITE.methodology(); }
   function resources(id) {
     const r=DATA.resources.find(r=>r.id===id);
-    if(r)return `<article class="container page prose"><div class="breadcrumb"><a href="#recursos">Recursos</a><span>/</span>Guía</div><p class="eyebrow">Una idea para tu recorrido</p><h1>${r.title}</h1><p class="lead">${r.intro}</p>${r.paragraphs.map(p=>`<p>${p}</p>`).join('')}<div class="actions" style="margin-top:30px"><a class="btn" href="#mi-espacio">Volver a mi espacio</a><a class="text-link" href="#recursos">Ver otros recursos</a></div></article>`;
-    return `<div class="container page"><p class="eyebrow">Para seguir explorando</p><h1>Ideas que puedes llevar a tu vida</h1><p class="lead">Preguntas y experiencias para conocerte, comparar caminos y decidir tu siguiente paso.</p><a class="text-link" href="#evaluaciones">Explorar las guías de reflexión ↗</a><div class="grid-3 section">${DATA.resources.map(r=>`<article class="panel resource-card"><div class="icon-circle">${icon(r.icon)}</div><h3>${r.title}</h3><p>${r.intro}</p><a class="text-link" href="#recursos/${r.id}">Leer la guía</a></article>`).join('')}</div></div>`;
+    if(r)return `<article class="container page prose"><div class="breadcrumb"><a href="#recursos">Recursos</a><span>/</span>Lectura</div><p class="eyebrow">Una idea para tu recorrido</p><h1>${r.title}</h1><p class="lead">${r.intro}</p>${r.paragraphs.map(p=>`<p>${p}</p>`).join('')}<div class="actions" style="margin-top:30px"><a class="btn" href="#recursos">Ver otros recursos</a><a class="text-link" href="#primer-paso">Encontrar mi punto de partida ↗</a></div></article>`;
+    return `<div class="container page resource-hub"><div class="reading-intro"><p class="eyebrow">Recursos para explorar a tu ritmo</p><h1>Empieza a conocerte.<br>Llévalo a tu vida.</h1><p class="lead">Guías de reflexión y lecturas para comprender tus respuestas, explorar opciones y preparar tu siguiente paso.</p></div><section><div class="section-heading"><div><p class="eyebrow">Guías de reflexión</p><h2>Una pregunta puede abrir un camino.</h2></div><a class="text-link" href="#evaluaciones">Ver todas las guías ↗</a></div><div class="grid-3">${DATA.assessments.map(a=>`<article class="panel resource-guide"><div class="icon-circle">${icon(a.icon)}</div><span class="resource-meta">${a.items.length} preguntas · A tu ritmo</span><h3>${a.title}</h3><p class="muted">${a.intro}</p><a class="text-link" href="#evaluacion/${a.id}">Conocer la guía <span aria-hidden="true">↗</span></a></article>`).join('')}</div><p class="resource-caption">Ejercicios demostrativos, sin registro. No sustituyen una evaluación formal. <a class="text-link" href="#metodologia">Cómo interpretarlos</a>.</p></section><section class="section"><div class="section-heading"><div><p class="eyebrow">Lecturas prácticas</p><h2>Convierte la reflexión en acción.</h2></div></div><div class="grid-3">${DATA.resources.map(r=>`<article class="panel resource-card"><div class="icon-circle">${icon(r.icon)}</div><h3>${r.title}</h3><p>${r.intro}</p><a class="text-link" href="#recursos/${r.id}">Leer el artículo <span aria-hidden="true">↗</span></a></article>`).join('')}</div></section><section class="help-band"><div><h3>¿Tienes dudas sobre el proceso?</h3><p>Conoce qué puedes esperar y cómo utilizamos las herramientas.</p></div><a class="btn secondary small" href="#preguntas-frecuentes">Preguntas frecuentes</a></section></div>`;
   }
   function privacy() {
     return `<div class="container page prose"><p class="eyebrow">Privacidad y guardado</p><h1>Tu recorrido se guarda en este navegador.</h1><p class="lead">Esta versión no tiene cuentas de usuario ni envía tus respuestas a un servidor.</p><h2>Qué se guarda</h2><p>Si tu navegador lo permite, se guardan las respuestas, el avance, la fecha de cada cuestionario, sus resultados y las notas de tu siguiente paso. No pedimos nombre, correo ni datos de contacto.</p><h2>Quién puede verlo</h2><p>Una persona con acceso a este navegador o a sus datos puede consultar el contenido de Mi espacio. El almacenamiento local no sustituye una cuenta privada protegida. En un dispositivo compartido, elimina tus avances y resultados al terminar.</p><h2>Qué puede perderse</h2><p>Al borrar los datos del sitio, utilizar navegación privada o cambiar de navegador o dispositivo, el recorrido puede no estar disponible. Puedes conservar una copia de un resultado con Imprimir / PDF.</p><h2>Servicios externos</h2><p>La página utiliza archivos e ilustraciones incluidos en el proyecto y no incorpora analítica, publicidad ni fuentes remotas. El proveedor que aloja la página puede registrar solicitudes de acceso conforme a sus propias condiciones; las respuestas de los cuestionarios no se incluyen en esas solicitudes.</p><h2>Eliminar mi recorrido</h2><p>Puedes borrar un avance o resultado desde Mi espacio, o eliminar todo el recorrido guardado en este navegador.</p><button class="btn secondary" data-action="clear-all">Eliminar todo mi recorrido</button><p class="small muted" style="margin-top:20px">Esta eliminación no borra las copias PDF que hayas guardado por separado.</p></div>`;
@@ -136,7 +136,8 @@
   function missing() {return '<div class="container page"><div class="panel empty"><h1>No encontramos esta página</h1><p>El resultado puede haber sido eliminado o pertenecer a otro navegador.</p><a class="btn" href="#mi-espacio">Ir a mi espacio</a></div></div>';}
   function render() {
     const parts=location.hash.slice(1).split('/');const route=parts[0]||'inicio';const id=parts[1];const isQuiz=route==='cuestionario'&&findAssessment(id)&&store.drafts[id];
-    header(route==='acompanamiento'?'acompanamientos':route==='inicio'&&id==='faq'?'preguntas-frecuentes':route,isQuiz);
+    const navRoute=['evaluaciones','evaluacion','ejemplo'].includes(route)?'recursos':route==='acompanamiento'?'acompanamientos':route;
+    header(navRoute,isQuiz);
     let html;
     switch(route){
       case 'inicio':html=id==='faq'?SITE.faqPage():home();break;
@@ -153,14 +154,14 @@
       case 'acompanamientos':html=SITE.accompaniment(null,icon);break;
       case 'acompanamiento':html=SITE.accompaniment(id,icon);break;
       case 'sobre':html=SITE.about();break;
-      case 'primer-paso':html=SITE.firstStep(icon);break;
+      case 'primer-paso':html=SITE.firstStep(icon,id);break;
       case 'recursos':html=resources(id);break;
       case 'privacidad':html=privacy();break;
       default:html=missing();
     }
     main.innerHTML=html;
     const title=main.querySelector('h1')?.innerText.replace(/\s+/g,' ').trim()||'Inicio';document.title=route==='inicio'&&id!=='faq'?`${SITE.settings.name} · Orientación vocacional y profesional`:`${title} · ${SITE.settings.name}`;
-    if(previousRoute!==location.hash){window.scrollTo(0,0);main.focus({preventScroll:true});previousRoute=location.hash;}
+    if(previousRoute!==location.hash){window.scrollTo({top:0,left:0,behavior:'instant'});main.focus({preventScroll:true});previousRoute=location.hash;}
   }
   function currentQuiz(){const id=location.hash.slice(1).split('/')[1];return {a:findAssessment(id),d:store.drafts[id]};}
   document.addEventListener('change',event=>{
