@@ -6,7 +6,7 @@ window.BEMA_SITE = (() => {
     // Enlace HTTPS real: agenda, página de contacto o WhatsApp autorizado.
     contact: { url: '', label: 'Solicitar orientación' },
     // Cobro externo y atención por correo. Activar solo con datos reales y operación lista.
-    evaluation: { price: null, currency: 'MXN', checkoutUrl: '', supportEmail: '', ready: false }
+    evaluation: { price: 2500, currency: 'MXN', checkoutUrl: '', supportEmail: '', ready: false }
   };
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const services = [
