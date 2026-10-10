@@ -8,12 +8,16 @@ Conócete. Elige con claridad. Avanza con intención. La evaluación Benziger, a
 
 El mapa personal integra resultados y la información adicional que aporte la persona. Intereses, valores y circunstancias no se atribuyen todos al examen. El ejemplo de Alex es ficticio, ilustrativo y no reproduce un reporte oficial.
 
-## Modalidades
+## Programas de acompañamiento
 
-- Por correo: $2,500 MXN, con evaluación Benziger, revisión profesional y retroalimentación personalizada escrita.
-- Con conversación personal: $3,500 MXN, con evaluación, retroalimentación y conversación con un profesional.
+- Mapa Personal: $2,500 MXN, con evaluación Benziger, perfil individual, material de interpretación, devolución personalizada escrita y dudas específicas sobre el reporte.
+- Claridad Personal: $3,500 MXN, con todo lo anterior más una sesión personal de interpretación y exploración aplicada a la situación de la persona.
+- Trayectoria: $4,000 MXN, con todo lo anterior más dos sesiones breves de seguimiento personal. Se mantiene el precio autorizado, que supone un descuento respecto a contratar los seguimientos por separado.
+- Seguimiento para antiguos clientes: $500 MXN por sesión. Utiliza el mapa existente y no incluye una nueva evaluación.
 
-No se han inventado plazos, duración de sesiones, perfiles profesionales, testimonios ni condiciones de nuevas evaluaciones. Se confirman antes de activar la contratación.
+Los programas se configuran en `settings.evaluation.modalities`; el seguimiento independiente en `settings.evaluation.followUp`. Los nombres nuevos conservan las URL anteriores de correo y conversación. Trayectoria y seguimiento tienen páginas propias.
+
+Antes de activar la contratación se deben confirmar plazos, formato y duración de sesiones, programación y vigencia de los seguimientos, canal y periodo de dudas posteriores, datos del equipo y condiciones. No se prometen respuestas ilimitadas ni se asignan sesiones a una persona cuyo papel no esté confirmado.
 
 ## Páginas y generación
 
@@ -41,7 +45,7 @@ Respuestas y notas de guías gratuitas se guardan en localStorage con la clave `
 
 Completar `settings` en content.js con nombres, biografías, fotografías reales y denominación exacta de las certificaciones. Completar el contacto HTTPS autorizado.
 
-En `settings.evaluation`: configurar supportEmail, los enlaces checkoutUrl propios de cada modalidad y ready=true solo cuando el proceso esté operativo. El botón de cada modalidad requiere precio positivo, correo válido y URL HTTPS sin credenciales. Tener un enlace para una modalidad no habilita la otra.
+En `settings.evaluation`: configurar supportEmail, los enlaces checkoutUrl propios de cada programa y del seguimiento independiente y ready=true solo cuando el proceso esté operativo. El botón de cada programa o seguimiento requiere precio positivo, correo válido y URL HTTPS sin credenciales. Cada opción se habilita de forma independiente.
 
 Antes de activar: definir plazos, formato y duración de conversación, entregables, condiciones, política de cambios/cancelación y aviso de privacidad del servicio con datos reales. Cualquier evaluación adicional se aclara antes de continuar.
 
