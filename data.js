@@ -2,6 +2,32 @@
    Big Five, IPIP or O*NET instruments. Do not label them as validated tests. */
 window.CAMINO_DATA = {
   version: 1,
+  areaDescriptions: {
+    'Análisis de datos':'Explora cómo se limpian y comparan datos para responder una pregunta. Prueba una pequeña tabla y observa si disfrutas interpretarla.',
+    'Investigación':'Elige una pregunta, compara fuentes y revisa qué evidencia respalda una explicación.',
+    'Finanzas':'Investiga cómo se comparan presupuestos, costos y escenarios para tomar decisiones con recursos limitados.',
+    'Gestión de proyectos':'Observa cómo se coordinan tareas, tiempos y personas. Prueba planear un proyecto pequeño.',
+    'Operaciones':'Investiga cómo funciona un proceso cotidiano y qué cambios podrían hacerlo más claro o eficiente.',
+    'Administración':'Explora el seguimiento de documentos, recursos y responsabilidades en una organización.',
+    'Diseño':'Prueba crear una solución visual o un objeto para una necesidad concreta y pedir comentarios.',
+    'Innovación':'Busca distintas maneras de resolver un problema y contrasta una propuesta con una experiencia pequeña.',
+    'Comunicación creativa':'Explora cómo se transforma una idea en un mensaje para una audiencia, mediante texto, imagen o video.',
+    'Educación':'Prueba explicar un tema y adaptar tu explicación a lo que necesita aprender otra persona.',
+    'Desarrollo de personas':'Investiga cómo se acompaña el aprendizaje y la colaboración de las personas en distintos equipos.',
+    'Servicio a la comunidad':'Conoce una iniciativa local y las actividades concretas con las que responde a una necesidad.',
+    'Ingeniería aplicada':'Investiga cómo se diseñan y prueban soluciones para problemas prácticos con materiales o equipos.',
+    'Oficios técnicos':'Explora un taller introductorio y las tareas de construcción, mantenimiento o reparación del oficio.',
+    'Producción':'Observa los pasos para transformar materiales en un producto y cómo se comprueba su calidad.',
+    'Ciencias':'Explora una pregunta mediante observación y evidencia; conoce el trabajo cotidiano del área que te interesa.',
+    'Artes':'Prueba una forma de expresión y observa qué disfrutas de crear, practicar y compartir una pieza.',
+    'Comunicación':'Investiga cómo se preparan mensajes y se eligen medios para distintos públicos y objetivos.',
+    'Servicios comunitarios':'Conoce actividades de acompañamiento o colaboración que respondan a una necesidad de la comunidad.',
+    'Negocios':'Explora qué necesidad atiende una organización y cómo coordina recursos para ofrecer su producto o servicio.',
+    'Gestión comercial':'Investiga cómo se entienden necesidades de clientes, se presentan propuestas y se da seguimiento a acuerdos.',
+    'Emprendimiento':'Describe una necesidad y una propuesta pequeña para atenderla; contrástala con posibles usuarios.',
+    'Contabilidad':'Explora cómo se organizan y revisan registros de operaciones y movimientos de una organización.',
+    'Gestión de procesos':'Describe los pasos de una tarea recurrente y prueba una mejora que facilite su seguimiento.'
+  },
   assessments: [
     {
       id: 'pensamiento', title: 'Estilos de pensamiento', category: 'Autoconocimiento', icon: 'layers',

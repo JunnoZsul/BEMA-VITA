@@ -329,6 +329,32 @@ img{height:auto}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
 
+/* Comparación de programas y devolución ilustrativa. */
+.availability-note{font-size:.86rem;line-height:1.65;color:var(--muted);border-left:3px solid var(--orange);padding:10px 15px;margin-top:20px;max-width:620px;background:#f4ede4;border-radius:0 9px 9px 0}
+.availability-note strong{color:var(--navy)}
+.program-fit{font-size:.87rem;color:var(--muted);line-height:1.65;margin-bottom:24px}
+.program-fit strong{color:var(--navy)}
+.comparison-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--white);margin:25px 0 18px}
+.comparison-scroll table{border-collapse:collapse;width:100%;min-width:620px;font-size:.92rem}
+.comparison-scroll caption{text-align:left;padding:18px 22px;font-weight:650;color:var(--navy)}
+.comparison-scroll th,.comparison-scroll td{padding:17px 22px;text-align:left;border-top:1px solid var(--line);vertical-align:top}
+.comparison-scroll thead th{background:#f4ede4}
+.comparison-scroll thead span{display:block;font-weight:500;font-size:.83rem;color:var(--muted);margin-top:6px}
+.comparison-scroll tbody th{font-weight:550;width:34%}
+.comparison-scroll td{color:var(--muted)}
+.report-preview{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:45px;align-items:start}
+.report-paper{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--orange);border-radius:14px;padding:35px;box-shadow:0 12px 30px #14263d08}
+.report-paper .badge{margin-bottom:25px}
+.report-brand{font-size:.8rem;font-weight:750;letter-spacing:.12em;padding-bottom:16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.report-brand span{color:var(--muted);font-weight:500;letter-spacing:0}
+.report-paper dl{margin:25px 0}
+.report-paper dt{font-size:.84rem;font-weight:700;color:var(--orange);margin:21px 0 6px}
+.report-paper dd{margin:0;font-size:.94rem;color:var(--muted);line-height:1.7}
+.availability-label{font-weight:650;color:var(--navy);padding:12px 0;margin-bottom:0}
+.guide-next-step h2{font-size:1.5rem}.guide-next-step>.actions{flex-shrink:0;align-items:flex-start;flex-direction:column}
+@media(max-width:760px){.report-preview{grid-template-columns:1fr;gap:23px}.report-paper{padding:24px}.comparison-scroll th,.comparison-scroll td{padding:14px 16px}.guide-next-step>.actions{width:100%}.guide-next-step>.actions .btn{width:100%}}
+@media print{.guide-next-step{display:none!important}.report-preview{display:block}.report-paper{box-shadow:none;break-inside:avoid}}
+
 /* Tres programas y continuidad para clientes. */
 .followup-band{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr);align-items:center;gap:40px;padding:34px;border:1px solid var(--line);border-radius:18px;background:#f4ede4}
 .followup-band h2{font-size:1.8rem}.followup-band p{margin-bottom:0}

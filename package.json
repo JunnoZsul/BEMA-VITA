@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node scripts/serve.cjs",
     "generate": "node build-pages.cjs",
+    "test": "node scripts/test.cjs",
     "check": "node --check content.js && node --check routes.js && node --check app.js && node --check data.js && node --check build-pages.cjs"
   }
 }

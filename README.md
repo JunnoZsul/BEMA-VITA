@@ -28,6 +28,7 @@ Los archivos HTML generados se incluyen en el repositorio: Vercel puede servirlo
 ```sh
 npm run check
 npm run generate
+npm test
 npm start
 ```
 
@@ -56,5 +57,11 @@ El sitio no confirma pagos, no registra pedidos ni envía correos automáticamen
 Search Console: añadir el valor de verificación real en routes.js, regenerar, verificar la propiedad y enviar https://bemavita.vercel.app/sitemap.xml. No se presume indexación ni verificación de propiedad.
 
 Analytics no está conectado: falta la propiedad elegida y definir el tratamiento de privacidad. La medición futura debe limitarse a navegación y contratación; no enviar respuestas, resultados o textos personales de evaluaciones. No se incorporó seguimiento ficticio.
+
+## Mejoras de la revisión de octubre
+
+La portada presenta evaluación y entregables; los botones invitan a consultar programas mientras la contratación permanece cerrada. La comparación distingue devolución escrita, interpretación y seguimiento. El mapa incorpora una devolución ficticia ilustrativa, sin reproducir un informe Benziger ni prometer una presentación idéntica. Contacto ofrece recorridos gratuitos hasta disponer de un canal real.
+
+Las guías conservan todas las dimensiones destacadas en empates. Las actividades incluyen los empates en el tercer lugar para evitar exclusiones por el orden de la lista. Las opciones cuentan con descripciones de actividades para investigar. Se conservan las puntuaciones, versiones y la clave de almacenamiento de resultados anteriores. `npm test` comprueba estos casos, carga de notas y enlaces de las páginas generadas.
 
 Faltan perfiles reales del equipo, contacto, condiciones y conexión de cobro. El sitio presenta el servicio y los precios, pero los pagos permanecen deshabilitados.
